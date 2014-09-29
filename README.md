@@ -7,7 +7,7 @@ does not provide any means to authenticate clients. Use
 [clj-oauth2](https://github.com/sudharsh/clj-oauth2) to authenticate
 users with Dropbox
 
-The library depends upon `clj-oauth'.
+The library depends upon `clj-oauth2'.
 
 ## Usage
 
