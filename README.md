@@ -1,10 +1,26 @@
-# clj-dropbox-oauth2
+# Simple Clojure bindings to the Dropbox API with OAuth2
 
-A Clojure library designed to ... well, that part is up to you.
+clj-dropbox-oauth2 provides clojure bindings to the Dropbox API. It
+uses Oauth2 as authorization/authentication mechanism. However, it
+does not provide any means to authenticate clients. Use
+[friend-oauth2][https://github.com/ddellacosta/friend-oauth2] or
+[clj-oauth2][https://github.com/sudharsh/clj-oauth2] to authenticate
+users with Dropbox
+
+The library depends upon `clj-oauth'.
 
 ## Usage
 
-FIXME
+```clojure
+(require '[clj-dropox-oauth2 :as dropbox])
+
+;; request user's access token by other means...
+
+(def found-files (dropbox/search access-token :dropbox "/path/to/directory"
+"*.pdf"))
+
+(def file (dropbox/file access-token "/path/to/my/file.txt"))
+```
 
 ## License
 
