@@ -9,7 +9,16 @@ users with Dropbox
 
 The library depends upon `clj-oauth2'.
 
+## Installation
+
+Add project dependency:
+
+```clojure
+[clj-dropbox-oauth2 "0.1.1"]
+```
+
 ## Usage
+
 
 ```clojure
 (require '[clj-dropox-oauth2.dropbox :as dropbox])

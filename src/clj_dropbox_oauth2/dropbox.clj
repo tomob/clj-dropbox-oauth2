@@ -35,7 +35,7 @@
   "Downloads a file"
   [access-token path]
   (let [url (format "https://api-content.dropbox.com/1/files/auto/%s" path)]
-    (:body (do-request oauth2/get access-token url))))
+    (:body (do-request oauth2/get access-token url {:as :stream}))))
 
 (defn account-info
   "Retrieves information about the user's account"

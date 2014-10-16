@@ -1,4 +1,4 @@
-(defproject clj-dropbox-oauth2 "0.1.0"
+(defproject clj-dropbox-oauth2 "0.1.1"
   :description "Simple Clojure bindings for Dropbox API with OAuth2."
   :url "https://github.com/tomob/clj-dropbox-oauth2"
   :license {:name "Eclipse Public License"
