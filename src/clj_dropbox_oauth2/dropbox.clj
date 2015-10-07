@@ -27,9 +27,11 @@
 
 (defn metadata
   "Retrieves file/folder metadata"
-  [access-token path]
+  ([access-token path]
+   (metadata access-token path {}))
+  ([access-token path params]
   (let [url (format "https://api.dropbox.com/1/metadata/auto/%s" path)]
-    (parse-body (do-request oauth2/get access-token url))))
+    (parse-body (do-request oauth2/get access-token url {:query-params params})))))
 
 (defn files
   "Downloads a file"
